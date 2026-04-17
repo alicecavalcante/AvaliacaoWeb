@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista</title>
+</head>
+<body>
+
+<h1>Eventos</h1>
+<ul>
+    {% for evento in eventos %}
+        <li>{{ evento.evento }} - {{ evento.local }}</li>
+    {% empty %}
+        <li>Nenhum evento cadastrado</li>
+    {% endfor %}
+</ul>
+
+
+<a href="/novo/">Adicionar novo evento</a>
+
+</body>
+</html>
